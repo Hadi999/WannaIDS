@@ -21,7 +21,7 @@ How to run it correctly ?
 
 1.Disable SMB server , if not the tool cannot listen in the port 445
 2.Forward port 445 in your modem configuration 
-3.(optional) Create a rule in the firewall for the port 445 
+3.Create a rule in the firewall for the port 445 
 
 ############################
 
@@ -65,7 +65,7 @@ logo = """
 A Protection agaist Wannacrypt,who store all IP addresses who 
 send Requests in the 'smb' port (445) for exploiting MS17-010 
 or others exploits like MS08-67,who exploit  vulnerabilities
-in the SMB protocol .
+in the SMB protocol , read manual for more infos
 
 """
 sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
