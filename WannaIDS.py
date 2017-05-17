@@ -38,10 +38,8 @@ note: you should convert file into exe with py2exe for run it without any python
 """
 
 
-if (sys.platform.startswith("windows")):
-	pass
-else:
-	sys.exit("[-]WannaIDS is only for Windows")
+
+
 
 parser = optparse.OptionParser()
 parser.add_option("--log","-l",dest="log",help="Logging option")
