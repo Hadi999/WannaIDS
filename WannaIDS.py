@@ -70,8 +70,16 @@ sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 
 host = ""
 port = 445
-                
-sock.bind((host,port))        
+
+try:
+	sock.bind((host,port))
+
+except (socket.error):
+	sys.exit("[-]Port 445 already in use , disable the SMB Server ...")
+
+except:
+	sys.exit("[-]Firewall block our listening ... ")
+
 
 sock.listen(50)
 print(logo)
@@ -109,4 +117,6 @@ while True:
    		logy.close()
 
    c.close() 
+
+ 
 
